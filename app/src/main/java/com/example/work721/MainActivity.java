@@ -31,8 +31,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), getText(R.string.empty), Toast.LENGTH_LONG);
                     toast.show();
                 } else {
-                    char temp = inputAddress.charAt(0);
-                    if (Character.isLetter(temp)) {
+                    boolean temp = false;
+                    for(int i = 0 ; i < inputAddress.length(); i++){
+                        if(Character.isLetter(inputAddress.charAt(i))){
+                            temp =true;
+                            break;
+                        }
+                    }
+                    if (temp) {
                         String geo = "geo:?q=" + inputAddress;
                         Uri uri = Uri.parse(geo);
                         intent.setData(uri);
