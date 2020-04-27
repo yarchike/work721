@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">work 721</string>
+    <string name="find">Найти</string>
+    <string name="input">Введите адрес</string>
+    <string name="empty">Пустое поле ввода</string>
+</resources>
+
